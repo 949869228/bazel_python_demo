@@ -11,6 +11,6 @@ load("@rules_python//python:pip.bzl", "pip_install")
 # Create a central external repo, @deps, that contains Bazel targets for all the
 # third-party packages specified in the requirements.txt file.
 pip_install(
-    name="my_deps",
+    name="deps",
     requirements="//:requirements.txt",
 )

@@ -1,12 +1,10 @@
-load("@rules_python//python:defs.bzl", "py_test")
-load("@my_deps//:requirements.bzl", "requirement")
+load("//src/pytest:defs.bzl", "pytest_test")
 
-py_test(
+pytest_test(
     name = "test_larry",
     srcs = ["test_larry.py"],
     imports = ["../larry/"],
     deps = [
         "//larry:larry",
-        requirement("pytest"),
     ],
 )
